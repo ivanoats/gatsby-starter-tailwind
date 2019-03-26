@@ -1,21 +1,21 @@
-import React from "react";
-import PropTypes from "prop-types";
-import { StaticQuery, graphql } from "gatsby";
+import React from "react"
+import PropTypes from "prop-types"
+import { StaticQuery, graphql } from "gatsby"
 
-import Header from "./header";
+import Header from "./header"
 
 function Layout({ children }) {
   return (
     <StaticQuery
       query={graphql`
-      query SiteTitleQuery {
-        site {
-          siteMetadata {
-            title
+        query SiteTitleQuery {
+          site {
+            siteMetadata {
+              title
+            }
           }
         }
-      }
-    `}
+      `}
       render={data => (
         <div className="flex flex-col font-sans min-h-screen text-grey-darkest">
           <Header siteTitle={data.site.siteMetadata.title} />
@@ -27,22 +27,22 @@ function Layout({ children }) {
           <footer className="bg-blue">
             <div className="flex justify-between max-w-xl mx-auto p-4 md:p-8 text-sm">
               <p className="text-white">
-                Created by{" "}
+                Gatsby Starter by{" "}
                 <a
                   href="https://taylorbryant.blog"
                   className="font-bold no-underline text-white"
                 >
                   Taylor Bryant
-              </a>
+                </a>
               </p>
 
               <p>
                 <a
-                  href="https://github.com/taylorbryant/gatsby-starter-tailwind"
+                  href="https://github.com/ivanoats/gatsby-starter-tailwind"
                   className="font-bold no-underline text-white"
                 >
                   GitHub
-              </a>
+                </a>
               </p>
             </div>
           </footer>
@@ -54,6 +54,6 @@ function Layout({ children }) {
 
 Layout.propTypes = {
   children: PropTypes.node.isRequired
-};
+}
 
-export default Layout;
+export default Layout
