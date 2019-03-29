@@ -27,12 +27,11 @@ function Layout({ children }) {
           <footer className="bg-blue">
             <div className="flex justify-between max-w-xl mx-auto p-4 md:p-8 text-sm">
               <p className="text-white">
-                Gatsby Starter by{" "}
                 <a
                   href="https://taylorbryant.blog"
                   className="font-bold no-underline text-white"
                 >
-                  Taylor Bryant
+                  Site Credits
                 </a>
               </p>
 
